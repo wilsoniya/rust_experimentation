@@ -1,0 +1,5 @@
+[package]
+
+name = "look_n_say"
+version = "0.0.1"
+authors = ["Michael Wilson <wilsoniya@gmail.com>"]

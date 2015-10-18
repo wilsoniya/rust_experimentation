@@ -1,0 +1,11 @@
+[package]
+
+name = "codec_test"
+version = "0.0.1"
+authors = ["Michael Wilson <wilsoniya@gmail.com>"]
+
+# [dependencies]
+# rustc-serialize = "*"
+
+[dependencies.rustc-serialize]
+git = "https://github.com/rust-lang/rustc-serialize"

@@ -1,0 +1,12 @@
+[root]
+name = "codec_test"
+version = "0.0.1"
+dependencies = [
+ "rustc-serialize 0.3.0 (git+https://github.com/rust-lang/rustc-serialize)",
+]
+
+[[package]]
+name = "rustc-serialize"
+version = "0.3.0"
+source = "git+https://github.com/rust-lang/rustc-serialize#4fceb09d93f5f8cb613afc12224060db8ac7e740"
+
