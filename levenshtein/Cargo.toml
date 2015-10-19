@@ -1,0 +1,12 @@
+[package]
+name = "levenshtein"
+version = "0.1.0"
+authors = ["wilsoniya"]
+
+[lib]
+name = "levenshtein"
+path = "src/lib.rs"
+
+[[bin]]
+name = "levenshtein_test"
+path = "src/main.rs"
