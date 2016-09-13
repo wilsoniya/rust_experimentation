@@ -1,5 +1,6 @@
-use std::rand::Rng;
-use std::rand;
+extern crate rand;
+
+use rand::Rng;
 use std::fmt;
 
 type IP = (u8, u8, u8, u8);
@@ -16,25 +17,25 @@ impl Printable for IP {
 }
 
 pub struct UUID {
-    data: [u8, ..16],
+    data: [u8; 16],
 }
 
-impl fmt::Show for UUID {
+impl fmt::Display for UUID {
     fn fmt(&self, fmt: &mut fmt::Formatter) -> Result<(), fmt::Error> {
-        for i in range(0, 16) {
+        for i in 0..16 {
             if i == 4 || i == 6 || i == 8 || i == 10 {
                 fmt.write_str("-");
             }
-            fmt.write_str(format!("{:x}", self.data[i]).as_slice());
+            fmt.write_str(&format!("{:x}", self.data[i])[..]);
         }
         Ok(())
     }
 }
 
-impl std::rand::Rand for UUID {
-    fn rand<R: std::rand::Rng>(rng: &mut R) -> UUID {
-        let mut data = [0u8, ..16];
-        rng.fill_bytes(data.slice_mut(0, 16));
+impl rand::Rand for UUID {
+    fn rand<R: Rng>(rng: &mut R) -> UUID {
+        let mut data = [0u8; 16];
+        rng.fill_bytes(&mut data);
         UUID { data: data }
     }
 }
