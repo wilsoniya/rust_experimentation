@@ -1,0 +1,7 @@
+[package]
+name = "mio_pingpong"
+version = "0.1.0"
+authors = ["wilsoniya"]
+
+[dependencies]
+mio = "0.4.1"
